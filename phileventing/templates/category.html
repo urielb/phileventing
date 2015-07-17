@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+        <link rel="stylesheet" href="my.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.js">
+        </script>
+        <script src="my.js">
+        </script>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="page1">
+            <div data-theme="d" data-role="header">
+                <h3 id="header">
+                    PhilEventing
+                </h3>
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li>
+                            <a href="index.html" data-theme="a" data-icon="">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" data-theme="a" data-icon="" class="ui-btn-active ui-state-persist">
+                                Category
+                            </a>
+                        </li>
+                        <li>
+                            <a href="event.html" data-theme="a" data-icon="">
+                                Events
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content">
+                <div id="checkboxes1" data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+                        <legend>
+                        </legend>
+                        <input id="checkbox1" name="" type="checkbox" />
+                        <label for="checkbox1">
+                            Use Current Location
+                        </label>
+                    </fieldset>
+                </div>
+                <h4 id="category">
+                    Choose a Category
+                </h4>
+                <ul data-role="listview" data-divider-theme="" data-inset="true">
+                    <li data-theme="b">
+                        <a href="event.html" data-transition="slide">
+                            Art and Theater
+                            <span class="ui-li-count">
+                                15
+                            </span>
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="event.html" data-transition="slide">
+                            Sports
+                            <span class="ui-li-count">
+                                20
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-theme="a" data-role="footer" data-position="fixed">
+                <h3 id="footer">
+                    2012
+                </h3>
+            </div>
+        </div>
+        <script>
+            //App custom javascript
+        </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+{% extends "master.html" %}
+{% load url from future %}
+{% load static from staticfiles %}
+{% block content %}
+<h3 style="margin-top: -15px; padding: 0px; width: 100%;"><img align="center" src="{% static 'images/header.jpg' %}" alt="Phileventing header" width="100%" height="180" ></h3>
+<form method="post" action="{% url "my_login" %}" class="">
+    {% csrf_token %}
+    {% if form.errors %}
+    <p class="error">Your username and password didn't match. Please try again.</p>
+    {% endif %}
+    <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup">
+            <label for="username">
+                Login
+            </label>
+            <br/>
+            <input name="username" id="id_username" placeholder="username" value="" type="text" />
+        </fieldset>
+    </div>
+    <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup">
+            <label for="password">
+            </label>
+            <input name="password" id="id_password" placeholder="password" value="" type="password" />
+        </fieldset>
+    </div>
+    <input type="hidden" name="next" value="{{ next }}" />
+    <button type="submit" />Login</button>
+    {% for name in social_auth.backends.oauth2 %}
+        {% if name == "facebook" %}
+        <a id="facebook" data-role="button" rel="external" data-transition="none" data-theme="b" href="{% url "socialauth_begin" name %}">
+            Login with Facebook
+        </a>
+
+        {% endif %}
+      {% endfor %}
+     
+     <br><br>
+
+    <a data-role="button" data-theme="d" href="{% url 'register_new_account' %}">
+        Creat a New Account 
+    </a>
+    
+    <!--<li><a rel="external" href="{% url "fb_app" %}">Facebook Canvas Application</a></li>-->
+    
+</form>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "master.html" %}
+
+{% block content %}
+<div id="checkboxes1" data-role="fieldcontain">
+    <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+        <legend>
+        </legend>
+        <input id="checkbox1" name="" type="checkbox" />
+        <label for="checkbox1">
+            Use Current Location
+        </label>
+    </fieldset>
+</div>
+<h4 id="category">
+    Choose a Category
+</h4>
+<ul data-role="listview" data-divider-theme="" data-inset="true">
+    <li data-theme="b">
+        <a href="event.html" data-transition="slide">
+            Art and Theater
+            <span class="ui-li-count">
+                15
+            </span>
+        </a>
+    </li>
+    <li data-theme="b">
+        <a href="event.html" data-transition="slide">
+            Sports
+            <span class="ui-li-count">
+                20
+            </span>
+        </a>
+    </li>
+</ul>
+{% endblock %}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+        <link rel="stylesheet" href="my.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.js">
+        </script>
+        <script src="my.js">
+        </script>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="page1">
+            <div id="header" data-theme="a" data-role="header">
+                <h4 id="header">
+                    Create a New Account
+                </h4>
+            </div>
+            <div data-role="content">
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-mini="true">
+                        <label for="userNew">
+                            User Name :
+                        </label>
+                        <input name="" id="userNew" placeholder="" value="" type="text" />
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-mini="true">
+                        <label for="passNew">
+                            Password:
+                        </label>
+                        <input name="" id="passNew" placeholder="" value="" type="password" />
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-mini="true">
+                        <label for="passConNew">
+                            Confirm Password:
+                        </label>
+                        <input name="" id="passConNew" placeholder="" value="" type="password" />
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-mini="true">
+                        <label for="emailNew">
+                            Email:
+                        </label>
+                        <input name="" id="emailNew" placeholder="" value="" type="email" />
+                    </fieldset>
+                </div>
+                <!---<input id="createAccount" value="Create Account" type="submit" href="category.html"/>-->
+				 <a data-role="button" data-theme="d" href="category.html">
+                    Create Account
+                </a>
+            </div>
+			<br><br>
+			<a data-role="button" data-theme="d" style="height: 40px; width: 180px" href="index.html">
+                     Go Back Home
+                </a>
+        </div>
+        <script>
+            //App custom javascript
+        </script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+{% extends "master.html" %}
+
+{% block content %}
+
+<h1>{{ category|capfirst }}</h1>
+<div id="events_holder">
+    {% for entry in entries %}
+    <h2>{{ entry.title }}</h2>
+    <small>{{ entry.description }}</small>
+    {% endfor %}
+</div>
+
+<div data-role="navbar" data-iconpos="top">
+    <ul>
+        <li>
+            <a href="{% url index %}" data-theme="a" data-icon="">
+                PREV
+            </a>
+        </li>
+        <li>
+            Page ...
+        </li>
+        
+        <li>
+                <a href="{% url logout %}" data-theme="a" data-icon="">
+                    NEXT
+                </a>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if entries.has_previous %}
+            <a href="?page={{ entries.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ entries.number }} of {{ entries.paginator.num_pages }}.
+        </span>
+
+        {% if entries.has_next %}
+            <a data-role="button" data-theme="b" href="?page={{ entries.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script type='text/javascript'>
+</script>
+{% endblock %}

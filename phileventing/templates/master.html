@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static from staticfiles %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/themes/theme1.css' %}" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" /> 
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script> 
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+</head>
+
+<body>
+    <!-- Home -->
+    <div data-role="page" id="page1">            
+        <div data-role="header" data-position="inline">
+            <h4 id="header">
+                <div><img align="right" class="none" width ="100%" border ="0px"  alt="Philevenitng Logo" src="{% static 'images/Phillogo.png' %}"> </div>
+            </h4>
+            <div data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="" data-theme="d" data-icon="" class="ui-btn-active ui-state-persist">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url index %}" data-theme="a" data-icon="">
+                            Category
+                        </a>
+                    </li>
+                    <li>
+                        <a href="event.html" data-theme="a" data-icon="">
+                            Events
+                        </a>
+                    </li>
+                    {% if request.user.is_authenticated %}
+                    <li>
+                        <a href="{% url logout %}" data-theme="a" data-icon="">
+                            Logout
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>    				
+        <div data-role="content">
+            {% block heading %}
+            {% endblock %}
+            {% block content %}
+            {% endblock %}
+        </div>
+
+    </div>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <h3 id="footer">
+            2012
+        </h3>
+    </div>
+</div>
+<script>
+//App custom javascript
+</script>
+{% block script %}
+{% endblock %}
+</body>
+</html>

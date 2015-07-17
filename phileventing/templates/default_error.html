@@ -1,0 +1,9 @@
+{% extends "master.html" %}
+
+{% block content %}
+
+    {% if error %}
+        <p style="background-color: lightred; color: darkred;">{{ error }}</p>
+    {% endif %}
+
+{% endblock %}
